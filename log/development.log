@@ -1,0 +1,163 @@
+Started GET "/" for ::1 at 2022-12-20 11:28:47 -0800
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 54.3ms | Allocations: 948)
+Completed 200 OK in 260ms (Views: 196.4ms | MongoDB: 0.0ms | Allocations: 5077)
+
+
+Started GET "/" for ::1 at 2022-12-20 11:29:12 -0800
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 3.2ms | Allocations: 822)
+Completed 200 OK in 29ms (Views: 15.8ms | MongoDB: 0.0ms | Allocations: 4035)
+
+
+Started GET "/" for ::1 at 2022-12-20 11:33:42 -0800
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.8ms | Allocations: 490)
+Completed 200 OK in 15ms (Views: 5.3ms | MongoDB: 0.0ms | Allocations: 1454)
+
+
+Started GET "/posts" for ::1 at 2022-12-20 11:33:46 -0800
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | There was a change in the members of the 'Unknown' topology.
+MONGODB | Server localhost:27017 initializing.
+MONGODB | Waiting for up to 5.00 seconds for servers to be scanned: #<Cluster topology=Unknown[localhost:27017] servers=[#<Server address=localhost:27017 UNKNOWN>]>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | localhost:27017 req:6 conn:1:1 sconn:3 | rails_mongoid_development.find | STARTED | {"find"=>"posts", "filter"=>{}, "$db"=>"rails_mongoid_development", "lsid"=>{"id"=><BSON::Binary:0x15520 type=uuid data=0xe395e3102b5243ba...>}}
+MONGODB | localhost:27017 req:6 | rails_mongoid_development.find | SUCCEEDED | 0.001s
+  Rendered posts/index.html.erb within layouts/application (Duration: 82.4ms | Allocations: 6804)
+  Rendered layout layouts/application.html.erb (Duration: 525.3ms | Allocations: 77164)
+Completed 500 Internal Server Error in 572ms (MongoDB: 1.0ms | Allocations: 111581)
+
+
+  
+ActionView::Template::Error (Permission denied @ rb_file_s_rename - (E:/ruby on rails/rails-mongoid/tmp/cache/assets/sprockets/v4.0.0/sD/sDlNZ4arBKn1_bOlWXPWVy27xHmdsD39ALYonX9X2Ig.cache.15680.10976.698520, E:/ruby on rails/rails-mongoid/tmp/cache/assets/sprockets/v4.0.0/sD/sDlNZ4arBKn1_bOlWXPWVy27xHmdsD39ALYonX9X2Ig.cache)):
+  
+sprockets (4.2.0) lib/sprockets/path_utils.rb:362:in `rename'
+sprockets (4.2.0) lib/sprockets/path_utils.rb:362:in `atomic_write'
+sprockets (4.2.0) lib/sprockets/cache/file_store.rb:112:in `set'
+sprockets (4.2.0) lib/sprockets/cache.rb:227:in `set'
+sprockets (4.2.0) lib/sprockets/cache.rb:143:in `set'
+sprockets (4.2.0) lib/sprockets/loader.rb:263:in `store_asset'
+sprockets (4.2.0) lib/sprockets/loader.rb:226:in `load_from_unloaded'
+sprockets (4.2.0) lib/sprockets/loader.rb:59:in `block in load'
+sprockets (4.2.0) lib/sprockets/loader.rb:337:in `fetch_asset_from_dependency_cache'
+sprockets (4.2.0) lib/sprockets/loader.rb:43:in `load'
+sprockets (4.2.0) lib/sprockets/cached_environment.rb:44:in `block in load'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/map.rb:203:in `block in fetch_or_store'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/map.rb:182:in `fetch'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/map.rb:202:in `fetch_or_store'
+sprockets (4.2.0) lib/sprockets/cached_environment.rb:44:in `load'
+sprockets (4.2.0) lib/sprockets/base.rb:81:in `find_asset'
+sprockets (4.2.0) lib/sprockets/base.rb:88:in `find_all_linked_assets'
+sprockets (4.2.0) lib/sprockets/manifest.rb:125:in `each'
+sprockets (4.2.0) lib/sprockets/manifest.rb:125:in `to_a'
+sprockets (4.2.0) lib/sprockets/manifest.rb:125:in `block (2 levels) in find'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/safe_task_executor.rb:24:in `block in execute'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:47:in `block in synchronize'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:47:in `synchronize'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:47:in `synchronize'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/safe_task_executor.rb:22:in `execute'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/promise.rb:564:in `block in realize'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:352:in `run_task'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:343:in `block (3 levels) in create_worker'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `loop'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `block (2 levels) in create_worker'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:333:in `catch'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:333:in `block in create_worker'
+MONGODB | Server description for localhost:27017 changed from 'standalone' to 'standalone' [awaited].
+MONGODB | There was a change in the members of the 'Single' topology.
+Started GET "/posts" for ::1 at 2022-12-20 11:34:13 -0800
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | There was a change in the members of the 'Unknown' topology.
+MONGODB | Server localhost:27017 initializing.
+MONGODB | Waiting for up to 5.00 seconds for servers to be scanned: #<Cluster topology=Unknown[localhost:27017] servers=[#<Server address=localhost:27017 UNKNOWN>]>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | Topology type 'Unknown' changed to type 'Single'.
+MONGODB | localhost:27017 req:6 conn:1:1 sconn:6 | rails_mongoid_development.find | STARTED | {"find"=>"posts", "filter"=>{}, "$db"=>"rails_mongoid_development", "lsid"=>{"id"=><BSON::Binary:0x14180 type=uuid data=0x688732183ab24110...>}}
+MONGODB | localhost:27017 req:6 | rails_mongoid_development.find | SUCCEEDED | 0.006s
+  Rendered posts/index.html.erb within layouts/application (Duration: 43.7ms | Allocations: 7183)
+  Rendered layout layouts/application.html.erb (Duration: 159.9ms | Allocations: 40206)
+Completed 200 OK in 289ms (Views: 163.1ms | MongoDB: 5.7ms | Allocations: 76799)
+
+
+Started GET "/posts/new" for ::1 at 2022-12-20 11:34:16 -0800
+Processing by PostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 215.3ms | Allocations: 12157)
+  Rendered posts/new.html.erb within layouts/application (Duration: 218.6ms | Allocations: 12535)
+  Rendered layout layouts/application.html.erb (Duration: 236.2ms | Allocations: 15211)
+Completed 200 OK in 242ms (Views: 237.9ms | MongoDB: 0.0ms | Allocations: 15807)
+
+
+MONGODB | Server description for localhost:27017 changed from 'standalone' to 'standalone'.
+MONGODB | There was a change in the members of the 'Single' topology.
+Started POST "/posts" for ::1 at 2022-12-20 11:34:28 -0800
+Processing by PostsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"hello", "body"=>"hello, how are you?"}, "commit"=>"Create Post"}
+MONGODB | localhost:27017 req:8 conn:1:1 sconn:6 | rails_mongoid_development.insert | STARTED | {"insert"=>"posts", "ordered"=>true, "documents"=>[{"_id"=>BSON::ObjectId('63a20e44ec83210804dab8d7'), "title"=>"hello", "body"=>"hello, how are you?", "updated_at"=>2022-12-20 19:34:28.6966247 UTC, "created_at"=>2022-12-20 19:34:28.6966247 UTC}], "$d...
+MONGODB | localhost:27017 req:8 | rails_mongoid_development.insert | SUCCEEDED | 0.193s
+Redirected to http://localhost:3000/posts/63a20e44ec83210804dab8d7
+Completed 302 Found in 212ms (MongoDB: 192.7ms | Allocations: 2785)
+
+
+Started GET "/posts/63a20e44ec83210804dab8d7" for ::1 at 2022-12-20 11:34:28 -0800
+Processing by PostsController#show as TURBO_STREAM
+  Parameters: {"id"=>"63a20e44ec83210804dab8d7"}
+MONGODB | localhost:27017 req:9 conn:1:1 sconn:6 | rails_mongoid_development.find | STARTED | {"find"=>"posts", "filter"=>{"_id"=>BSON::ObjectId('63a20e44ec83210804dab8d7')}, "$db"=>"rails_mongoid_development", "lsid"=>{"id"=><BSON::Binary:0x14180 type=uuid data=0x688732183ab24110...>}}
+MONGODB | localhost:27017 req:9 | rails_mongoid_development.find | SUCCEEDED | 0.002s
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/_post.html.erb (Duration: 1.0ms | Allocations: 281)
+  Rendered posts/show.html.erb within layouts/application (Duration: 19.7ms | Allocations: 1713)
+  Rendered layout layouts/application.html.erb (Duration: 36.8ms | Allocations: 4375)
+Completed 200 OK in 54ms (Views: 38.3ms | MongoDB: 2.2ms | Allocations: 6137)
+
+
+Started GET "/posts/63a20e44ec83210804dab8d7/edit" for ::1 at 2022-12-20 11:34:32 -0800
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"63a20e44ec83210804dab8d7"}
+MONGODB | localhost:27017 req:10 conn:1:1 sconn:6 | rails_mongoid_development.find | STARTED | {"find"=>"posts", "filter"=>{"_id"=>BSON::ObjectId('63a20e44ec83210804dab8d7')}, "$db"=>"rails_mongoid_development", "lsid"=>{"id"=><BSON::Binary:0x14180 type=uuid data=0x688732183ab24110...>}}
+MONGODB | localhost:27017 req:10 | rails_mongoid_development.find | SUCCEEDED | 0.003s
+  Rendering layout layouts/application.html.erb
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 4.3ms | Allocations: 1218)
+  Rendered posts/edit.html.erb within layouts/application (Duration: 6.5ms | Allocations: 1538)
+  Rendered layout layouts/application.html.erb (Duration: 23.1ms | Allocations: 4085)
+Completed 200 OK in 38ms (Views: 24.9ms | MongoDB: 2.7ms | Allocations: 5760)
+
+
+Started PATCH "/posts/63a20e44ec83210804dab8d7" for ::1 at 2022-12-20 11:34:46 -0800
+Processing by PostsController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"hello", "body"=>"hello, how are you!\ni am very fine."}, "commit"=>"Update Post", "id"=>"63a20e44ec83210804dab8d7"}
+MONGODB | localhost:27017 req:13 conn:1:1 sconn:6 | rails_mongoid_development.find | STARTED | {"find"=>"posts", "filter"=>{"_id"=>BSON::ObjectId('63a20e44ec83210804dab8d7')}, "$db"=>"rails_mongoid_development", "lsid"=>{"id"=><BSON::Binary:0x14180 type=uuid data=0x688732183ab24110...>}}
+MONGODB | localhost:27017 req:13 | rails_mongoid_development.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 req:14 conn:1:1 sconn:6 | rails_mongoid_development.update | STARTED | {"update"=>"posts", "ordered"=>true, "updates"=>[{"q"=>{"_id"=>BSON::ObjectId('63a20e44ec83210804dab8d7')}, "u"=>{"$set"=>{"body"=>"hello, how are you!\ni am very fine.", "updated_at"=>2022-12-20 19:34:46.4142981 UTC}}}], "$db"=>"rails_mongoid_develop...
+MONGODB | localhost:27017 req:14 | rails_mongoid_development.update | SUCCEEDED | 0.002s
+Redirected to http://localhost:3000/posts/63a20e44ec83210804dab8d7
+Completed 302 Found in 18ms (MongoDB: 3.6ms | Allocations: 4009)
+
+
+Started GET "/posts/63a20e44ec83210804dab8d7" for ::1 at 2022-12-20 11:34:46 -0800
+Processing by PostsController#show as TURBO_STREAM
+  Parameters: {"id"=>"63a20e44ec83210804dab8d7"}
+MONGODB | localhost:27017 req:15 conn:1:1 sconn:6 | rails_mongoid_development.find | STARTED | {"find"=>"posts", "filter"=>{"_id"=>BSON::ObjectId('63a20e44ec83210804dab8d7')}, "$db"=>"rails_mongoid_development", "lsid"=>{"id"=><BSON::Binary:0x14180 type=uuid data=0x688732183ab24110...>}}
+MONGODB | localhost:27017 req:15 | rails_mongoid_development.find | SUCCEEDED | 0.001s
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/_post.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered posts/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 643)
+  Rendered layout layouts/application.html.erb (Duration: 19.2ms | Allocations: 3189)
+Completed 200 OK in 32ms (Views: 22.9ms | MongoDB: 1.0ms | Allocations: 4996)
+
+
